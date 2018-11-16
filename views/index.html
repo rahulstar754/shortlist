@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shortlist Artists - StarClinch</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.3/venobox.min.css" />
+    <link href="css/book.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://starclinch.com/images/favicon.png" />
+
+    <meta property="og:title" content="Shortlist Artists - StarClinch" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://book.starclinch.com" />
+    <meta property="og:image" content="https://starclinch.com/images/favicon.png" />
+    <meta property="og:description" content="" />
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-110169660-3', 'auto');
+    ga('send', 'pageview');
+    </script>
+    
+  </head>
+
+  <body id="page-top">
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">StarClinch</a>
+         <div class="navbar-header pull-right">
+          <ul class="nav pull-left">
+            <!-- This works well for static text, like a username -->
+            <li class="navbar-text pull-left">
+              <a class="nav-link text-white js-scroll-trigger" href="#" onclick="return false;"><span id="clientName"></span></a>
+            </li>            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center h-100" id="hero">
+      <div class="container">
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0"><span id="clientEvent">Event</span> Event - <span id="clientDate">12 June, 2018</span> - <span id="clientBudget">New Delhi, India</span></h2>
+        <br/>
+        <h2 class="font-weight-light mb-0"><span id="clientVenue">Event</span></h2>
+      </div>
+    </header>
+    
+    <section id="loading">
+      <div class="row text-center ">
+        <div class="text-center m-auto">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0"><span id="clientCategory">Artists</span></h2>
+        <hr class="star-dark mb-5">
+        <h5 class="text-center text-secondary">Click on Artist Picture to watch Videos</h5>
+        <br/><br/>
+        <div class="row" id="artist-container"></div>
+        
+      </div>
+      
+<!--       <div class="text-center mt-4" style="position: fixed; bottom: 0px; margin: 0 auto;">
+        <a id="button-shortlist" class="btn btn-xl btn-primary btn-outline-light" href="#" onclick="return false;">
+          <i class="fa fa-list mr-2"></i>
+          Shortlist!
+        </a>
+      </div> -->
+
+      <nav class="navbar navbar-expand-lg bg-secondary fixed-bottom text-uppercase text-center" style="background-color: #2c3e50e3 !important;">
+        <div class="container text-center">
+          <a id="button-shortlist" class="btn btn-lg btn-primary btn-outline-light mx-auto" href="#">
+            <i class="fa fa-check-circle mr-2"></i>
+            Shortlist!
+          </a>
+        </div>
+      </nav>
+      
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-5">
+            <a href="http://gig.vin/r5HB" target="_blank" class="btn btn-lg bg-light text-secondary">Terms &amp; Conditions</a>
+          </div>
+          <div class="col-md-6 mb-5">
+            <a href="https://starclinch.com/emi-pe-entertainment.html" target="_blank" class="btn btn-lg bg-light text-secondary">Pay via EMI</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Address</h4>
+            <p class="lead mb-0">Percept House
+              <br/>1, Raja Dhirsain Marg,
+              <br/>Sant Nagar, East Of Kailash
+              <br/>New Delhi, India 110065</p>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Around the Web</h4>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.facebook.com/starclinchpage/" target="_blank">
+                  <i class="fa fa-fw fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/starclinch/" target="_blank">
+                  <i class="fa fa-fw fa-instagram"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/starclinch" target="_blank">
+                  <i class="fa fa-fw fa-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">About StarClinch</h4>
+            <p class="lead mb-0">With us, you can discover and book your favorite Artists and Entertainers</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright py-4 text-center text-white" id="love">
+      <div class="container">
+        <small>Made with <span style="color:#ff0000">❤</span> from all over the world</small>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <!-- div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div> -->
+    
+    <div id="artist-modal" class="modal fade" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content m-auto">
+              <div class="modal-header">
+                <h5 class="modal-title" id=""></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div id="modal-loader" class="loader"></div>
+                <div id="modal-container" class="container-fluid text-center" style="display: none;">
+<!--                     <div class="row">
+                      <div class="col-lg-12 mx-auto">
+                        <img class="d-block w-100 mb-5" src="http://via.placeholder.com/350x150">
+                        <h2 id="artistName" class="text-secondary text-uppercase mb-0">xssxvsv</h2>
+                        <hr class="star-dark mb-5">
+                        <img id="artistImage" class="img-fluid mb-3" src="http://via.placeholder.com/150x150" alt="">
+                        <p class="text-aqua text-large mb-2"><i class="fa fa-star"></i> 2</p>
+                        <p class="mb-2 text-aqua">city | Does shows </p>
+                        <p class="mb-5">Does ggghf types of shows</p>
+                        <p class="mb-5 text-large">tagline</p>
+                        
+                        <iframe class="youtube" height="315" src="https://www.youtube.com/embed/' + youtube_parser((artistVideosArrray[p]).trim()) + '">
+                        </iframe>
+                        <div class="carousel slide mb-5" data-ride="carousel" id="carousel13123">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img class="d-block w-100" src="http://via.placeholder.com/350x150">
+                            </div>
+                             <div class="carousel-item ">
+                              <img class="d-block w-100" src="http://via.placeholder.com/350x150">
+                            </div>
+                             <div class="carousel-item ">
+                              <img class="d-block w-100" src="http://via.placeholder.com/350x150">
+                            </div>
+                          
+                          <a class="carousel-control-prev" href="#carousel13123" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carousel13123" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div></div>
+                        <h5 class="text-secondary text-uppercase mb-4">Performing Members: <span class="text-aqua">1</span></h5>
+                        <h5 class="text-secondary text-uppercase mb-4">Offstage Members: <span class="text-aqua">1</span></h5>
+                        <h5 class="text-secondary text-uppercase mb-5"> </h5>
+                        <h4 class="text-secondary text-uppercase mb-3">About aasd</h4>
+                        <div id="summary" class="mb-5">
+                          <p class="collapse text-justify" id="collapseSummary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor maximus laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Suspendisse venenatis sollicitudin erat in gravida. Sed eget nisl tristique, commodo lectus sit amet, vulputate sem. Cras porttitor lorem ipsum, sit amet iaculis massa feugiat vitae. Curabitur sapien odio, ullamcorper tincidunt interdum vitae, vestibulum eu neque. Nam leo massa, fringilla eget mauris feugiat, auctor suscipit justo.
+                          </p>
+                          <a class="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+              </div>
+              <a class="btn btn-primary btn-lg rounded-pill modal-button-close" data-dismiss="modal" aria-label="Close">CLOSE</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/freelancer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/venobox/1.8.3/venobox.min.js"></script>
+    <script src="js/book.js"></script>
+  </body>
+</html>

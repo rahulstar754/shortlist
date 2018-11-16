@@ -1,0 +1,372 @@
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #18bc9c; /* Aqua   */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+header.masthead {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+}
+
+#portfolio {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+#portfolio, #hero, #footer, #love {
+    display: none;
+}
+
+#love {
+    padding-bottom: 90px!important;
+}
+
+#loading {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+
+#footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.portfolio-modal .portfolio-modal-dialog {
+    min-height: unset;
+}
+
+.portfolio-caption {
+    float: unset;
+    max-width: 20rem;
+    padding-top: 3rem;
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.portfolio-subcaption {
+    float: right;
+    max-width: 20rem;
+}
+
+.portfolio .portfolio-item .portfolio-item-caption {
+    float: left;
+}
+
+.portfolio .portfolio-item {
+    padding: 5px 0;
+    max-width: 35rem;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+.portfolio .portfolio-item .portfolio-item-caption {
+    margin-top: -5px;
+    border-radius: 50%;
+    display: none !important;
+}
+
+.image-only {
+   width: 37% !important;
+   height: 100% !important;
+}
+
+.img-fluid {
+   height: 200px;
+   width: 200px;
+   border-radius: 50%;
+}
+
+.checkbox {
+    float: right;
+    margin-top: -5px;
+}
+
+input[type="checkbox"]{
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff;
+  border-radius: 1px;
+  box-sizing: border-box;
+  position: relative;
+  box-sizing: content-box ;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: 1px solid #0000003b;;
+  transition: all .3s linear;
+  }
+  input[type="checkbox"]:checked{
+    background-size: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M14 18L26 6l4 4-16 16L4 16l4-4z"/></svg>');
+  }
+
+  input[type="checkbox"]:checked +  .portfolio-item {
+    background-color: red;
+  }
+
+  input[type="checkbox"]:focus{
+    outline: 0 none;
+    box-shadow: none;
+  }
+
+
+  .carousel {
+    width: 70%; 
+    margin: 0 auto;
+  }
+
+  .youtube {
+    width: 70%; 
+    height: 415px;
+    margin: 0 auto;
+  }
+  
+  .facebook-responsive {
+    width: 415px;
+    height: 750px;
+    margin: 0 auto;
+  }
+
+  .modal-button-close {
+    max-width: 150px;
+    margin: 0 auto;  
+    margin-bottom: 20px;
+    color: white !important;
+  }
+
+ .btn-xl {
+    padding: 2rem 6rem;
+    font-size: 2rem;
+ }
+
+ .bg-success {
+    background-color: #18bc9c!important;
+ }
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #0f9278!important;
+    border-color: #18bc9c!important;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #16ab8e!important;
+    border-color: #18bc9c!important;
+}
+
+#button-shortlist.disabled {
+   font-size: 100%;
+}
+
+#button-shortlist {
+   font-size: 220%; 
+}
+
+.mfp-content {
+   padding: 20px; 
+}
+
+i.fa-3x {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.portfolio-modal-dialog .container {
+   padding: 10px 0; 
+}
+
+.portfolio-modal-dialog .row {
+   margin-top: 50px;
+   margin-bottom: 50px;
+   padding: 0 40px;
+}
+
+.card-rating {
+  float:right;
+}
+
+.text-aqua {
+  color: #16ab8e!important;
+}
+
+.text-large {
+  font-size: 150%;
+}
+
+.card-img-top, .card-body {
+    cursor: pointer;
+}
+
+#intercom-container .intercom-launcher-frame {
+    margin-bottom: 60px!important;
+    margin-right: -15px!important;
+}
+
+#intercom-container .intercom-app-launcher-enabled .intercom-messenger-frame {
+    height: calc(100% - 20px - 130px - 20px) !important;
+    bottom: calc(20px + 130px) !important;
+}
+
+
+
+
+/* .mfp-wrap {
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+}
+
+html.mfp-helper {
+  height: 100%;
+
+  body {
+    overflow: hidden;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+  }
+} */
+
+
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+  body.mfp-zoom-out-cur {
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
+  }
+
+.mfp-wrap {
+  position: fixed;
+  overflow: auto;
+}
+
+.modal-body {
+/*     max-height: calc(100vh - 210px);
+    overflow-y: auto; */
+  padding: unset!important;
+  
+}
+
+.modal-body .container-fluid {
+    padding: unset !important;  
+}
+
+#artist-modal {
+  padding: 15px!important;
+}
+
+.modal-dialog {
+  max-width: unset;
+}
+
+
+
+
+#summary {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-left: 20px; 
+  margin-right: 20px;
+}
+
+#summary p.collapse:not(.show) {
+    height: 42px !important;
+    overflow: hidden;
+  
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
+
+#summary p.collapsing {
+    min-height: 42px !important;
+}
+
+#summary a.collapsed:after  {
+    content: '+ Read More';
+}
+
+#summary a:not(.collapsed):after {
+    content: '- Read Less';
+}
+
+/* .artistCarouselImg img {
+  
+  height: 250px;
+  max-height: 250px;
+}
+ */
+
+.carousel { height: 600px; overflow: hidden;} 
+
+.carousel-control {
+  top: 250px;
+}
+
+.carousel-item img{
+  object-fit:cover;
+  height: 600px !important;  
+  object-position: top left;
+}
+
+#artist-subcategory, #artist-tagline {
+  margin-left: 20px; 
+  margin-right: 20px;     
+}
+
+  @media only screen and (max-width: 768px) {
+    .portfolio-caption {
+        margin: 0 auto;
+        float: unset;
+    }
+    
+    .carousel {
+      width: unset!important; 
+      margin: 0 auto;
+    }
+    
+    .youtube {
+      width: 100%!important; 
+      margin: 0 auto;
+    }
+    
+    .facebook-responsive {
+        height: 750px;
+        width: 100%!important;
+    }
+    
+    .modal-button-close {
+      max-width: unset!important;
+      margin: unset!important;  
+      color: white !important;
+      display: none;
+    }
+    
+    #artist-modal {
+      padding: unset!important;
+      margin: unset!important;
+    }
+ }
+
+.card-category {
+    text-transform: lowercase;
+}
+
+.card-category::first-letter {
+    text-transform: uppercase;
+}
