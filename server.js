@@ -203,8 +203,6 @@ app.post("/api/shortlist", function (request, response, next) {
 
   let axiosConfig = {
       headers: {
-          'cache-control': 'no-cache',
-           'x-apikey': process.env.RESTDB_API_KEY,
            'content-type': 'application/json'
       }
     };
@@ -213,11 +211,11 @@ app.post("/api/shortlist", function (request, response, next) {
       "dealid": dealID, 
       "artistsuggestrecid": artistsuggestrecid,
       // "artistids": JSON.stringify(artistids)
-      "artistids": JSON.stringify(artistids)
+      "artistids": artistids
     };
   // console.log(jsondata);
 
-  axios.post(process.env.RESTDB_API_URL, 
+  axios.post(process.env.CLOUD_FUNCTION_URL, 
              jsondata,
              axiosConfig
             )
