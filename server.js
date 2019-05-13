@@ -1,4 +1,7 @@
 // server.js
+require('dotenv').config();
+var dotenv = require('dotenv');
+dotenv.config();
 var express = require('express');
 const axios = require('axios');
 var Airtable = require('airtable');
@@ -6,8 +9,10 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+//require('dotenv').config();
+
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://book.starclinch.com");
+  res.header("Access-Control-Allow-Origin", "https://shortlist.starclinch.com");
   // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
@@ -34,7 +39,7 @@ let artistIDS = [];
 let artists = [];
 
 let fields = ["artistrecordid", "id", "professionalname", "city", "category", "subcategory", "gender", 
-              "url", "thumbnail", "updated", "subscription", "tagline", "social", "about",
+              "url", "profilewp", "updated", "subscription", "tagline", "social", "about",
              "images", "videos", "audios", "coverimage", "performingmembers", "offstageteammembers",
              "travel", "performanceduration", "rating"];
 let options = {
@@ -263,7 +268,7 @@ app.get("/api/artist/:artistrecordid", function (request, response, next) {
             '<img class="d-block w-100 mb-5" src="' + record.fields.coverimage + '">',
             '<h2 id="artistName" class="text-secondary text-uppercase mb-0">' + record.fields.professionalname + '</h2>',
             '<hr class="star-dark mb-5">',
-            '<img id="artistImage" class="img-fluid mb-3" src="https://fly.starcdn.net' + record.fields.thumbnail + '" alt="">',
+            '<img id="artistImage" class="img-fluid mb-3" src="' + record.fields.profilewp + '" alt="">',
             '<p class="text-aqua text-large mb-2"><i class="fa fa-star"></i> ' + record.fields.rating + '</p>',
             '<p class="mb-2 text-aqua">' + record.fields.city + ' | Does shows ' + record.fields.travel + '</p>',
             '<p id="artist-subcategory" class="mb-5">Does ' + record.fields.subcategory + ' types of shows</p>',
