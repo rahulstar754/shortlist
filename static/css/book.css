@@ -370,3 +370,9 @@ body {
 .card-category::first-letter {
     text-transform: uppercase;
 }
+
+#site-logo {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+}
