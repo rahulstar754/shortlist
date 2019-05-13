@@ -2,7 +2,7 @@
 var modalArtistID;
 
 $.ajax({
-  url: 'https://book.starclinch.com/api' + window.location.pathname,
+  url: 'https://shortlist.starclinch.com/api' + window.location.pathname,
   success: function(data) {
     console.log(data);
       $('#portfolio').show();
@@ -30,7 +30,7 @@ $.ajax({
          var fixture = $([     
           '<div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">',
             '<div class="card border-muted mb-5" id="' + artists[i].artistrecordid + '" style="max-width: 18rem; margin:0 auto;">',
-              '<img data-toggle="modal" data-target="#artist-modal" data-artist="' + artists[i].artistrecordid + '" class="card-img-top bg-light" src="https://fly.starcdn.net' + artists[i].thumbnail + '" alt="' + artists[i].professionalname  + '" onclick="ga(\'send\', \'event\', \'card\', \'view-image\', \'' + artists[i].id + '\');">',
+              '<img data-toggle="modal" data-target="#artist-modal" data-artist="' + artists[i].artistrecordid + '" class="card-img-top bg-light" src="' + artists[i].profilewp + '" alt="' + artists[i].professionalname  + '" onclick="ga(\'send\', \'event\', \'card\', \'view-image\', \'' + artists[i].id + '\');">',
               '<div data-toggle="modal" data-target="#artist-modal" data-artist="' + artists[i].artistrecordid + '" class="card-body text-secondary"  onclick="ga(\'send\', \'event\', \'card\', \'view-body\', \'' + artists[i].id + '\');">',
                 '<h5 class="card-title">' + artists[i].professionalname  + '</h5>',
                 '<p class="card-text">' + artists[i].city + '<span class="card-rating"><i class="fa fa-star"></i> ' + (artists[i].rating).toString().substring(0,3) + '</span></p>',
@@ -50,7 +50,7 @@ $.ajax({
     console.log(err.statusCode);
     console.log(Object.keys(err));
     if(err.statusCode) {
-      window.location.href = 'https://book.starclinch.com/404';
+      window.location.href = 'https://shortlist.starclinch.com/404';
     }
   }
 });
@@ -68,7 +68,7 @@ $('#artist-modal').on('show.bs.modal', function (event) {
   modal.find('.modal-button-close').hide();
   modal.find('#modal-loader').show();
   
-  modal.find('#modal-container').load('https://book.starclinch.com/api/artist/' + artist, function( response, status, xhr ) {
+  modal.find('#modal-container').load('https://shortlist.starclinch.com/api/artist/' + artist, function( response, status, xhr ) {
   if ( status == "error" ) {
     var msg = "Sorry but there was an error: ";
     
@@ -121,7 +121,7 @@ $( "#button-shortlist" ).click(function() {
       // console.log(jsondata);
 
     var settings = {
-      "url": "https://book.starclinch.com/api/shortlist",
+      "url": "https://shortlist.starclinch.com/api/shortlist",
       "method": "POST",
       "headers": {
         "content-type": "application/json",
@@ -133,7 +133,7 @@ $( "#button-shortlist" ).click(function() {
     $.ajax(settings).done(function (response) {
       //console.log("data posted to shortlist api");
       //console.log(response);
-      window.location.href = 'https://book.starclinch.com/thanks';
+      window.location.href = 'https://shortlist.starclinch.com/thanks';
     }).fail(function() {
       alert( "There was an error. Please try shortlisting again" );
       $('#portfolio').show();
