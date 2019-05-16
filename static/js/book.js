@@ -6,7 +6,7 @@ var SITE_URL = "http://127.0.0.1:8081";
 $.ajax({
   url: SITE_URL+'/api' + window.location.pathname,
   success: function(data) {
-    console.log(data);
+      console.log(data);
       $('#portfolio').show();
       $('#hero').show();
       $('#footer').show();
@@ -92,8 +92,6 @@ $('#artist-modal').on('hidden.bs.modal', function (e) {
     target.removeData('bs.modal')
     .find("#modal-container").html('');
 });
-
-
 
 
 var numSelected = $('.selected').length;
