@@ -145,27 +145,41 @@ $( "#button-shortlist" ).click(function() {
 
 });
 
-$('#artist-container').on('click', '.card-footer', function(event) {
+$('body').on('click', '.card-footer', function(event) {
   //console.log("card selected " + event.target.id);
   var targetId = event.target.id;
+  //add getIdb
+  var getIdb = targetId.substring(4);
   event.stopPropagation();
  
-  $(this).closest('.card').toggleClass('selected');
+  $('.card').toggleClass('selected');
 
-    if($(this).closest('.card').hasClass('selected')) {
+    if($('.card').hasClass('selected')) {
       $(this).text('UNSELECT');
-      $(this).removeClass('btn-secondary').addClass('btn-success');
-      $(this).closest('.card').addClass('bg-success');
-      $(this).closest('.card').find('.card-body').removeClass('text-secondary').addClass('text-white');
+	  $('#'+targetId).text('UNSELECT')
+      $('#'+targetId).removeClass('btn-secondary').addClass('btn-success');
+      $('#'+getIdb).addClass('bg-success');
+      $('#'+getIdb).find('.card-body').removeClass('text-secondary').addClass('text-white');
 
       $('#button-shortlist').removeClass('disabled');
+	  
+	  
+	  //Add code for show message for click shortlist button		
+      $("#button-shortlist").notify(		
+        "Click This Shortlist Button To Confirm", 		
+        { position:"top" }		
+      );		
+
+	  
       //$(this).closest('.card').find('.card-img-top').removeClass('bg-light').addClass('bg-success');
     }
     else {
-      $(this).text('SELECT');
-      $(this).removeClass('btn-success').addClass('btn-secondary');
-      $(this).closest('.card').removeClass('bg-success');
-      $(this).closest('.card').find('.card-body').removeClass('text-white').addClass('text-secondary');
+	  $(this).text('SELECT');
+      $('#'+targetId).text('SELECT');
+      $('#'+targetId).removeClass('btn-success').addClass('btn-secondary');
+      $('#'+getIdb).removeClass('bg-success');
+      $('#'+getIdb).find('.card-body').removeClass('text-white').addClass('text-secondary');
+		
       //$(this).closest('.card').find('.card-img-top').removeClass('bg-success').addClass('bg-light');
     }
   
