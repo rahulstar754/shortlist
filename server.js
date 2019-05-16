@@ -1,5 +1,6 @@
 // server.js
 require('dotenv').config();
+
 var dotenv = require('dotenv');
 dotenv.config();
 var express = require('express');
@@ -12,7 +13,7 @@ var app = express();
 //require('dotenv').config();
 
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://shortlist.starclinch.com");
+  res.header("Access-Control-Allow-Origin", process.env.SITE_URL);
   // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });

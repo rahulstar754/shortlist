@@ -1,8 +1,10 @@
 // console.log(window.location.pathname);
 var modalArtistID;
 
+var SITE_URL = "http://127.0.0.1:8081";
+
 $.ajax({
-  url: 'https://shortlist.starclinch.com/api' + window.location.pathname,
+  url: SITE_URL+'/api' + window.location.pathname,
   success: function(data) {
     console.log(data);
       $('#portfolio').show();
@@ -50,7 +52,7 @@ $.ajax({
     console.log(err.statusCode);
     console.log(Object.keys(err));
     if(err.statusCode) {
-      window.location.href = 'https://shortlist.starclinch.com/404';
+      window.location.href = SITE_URL+'/404';
     }
   }
 });
@@ -68,7 +70,7 @@ $('#artist-modal').on('show.bs.modal', function (event) {
   modal.find('.modal-button-close').hide();
   modal.find('#modal-loader').show();
   
-  modal.find('#modal-container').load('https://shortlist.starclinch.com/api/artist/' + artist, function( response, status, xhr ) {
+  modal.find('#modal-container').load(SITE_URL+'/api/artist/' + artist, function( response, status, xhr ) {
   if ( status == "error" ) {
     var msg = "Sorry but there was an error: ";
     
@@ -121,7 +123,7 @@ $( "#button-shortlist" ).click(function() {
       // console.log(jsondata);
 
     var settings = {
-      "url": "https://shortlist.starclinch.com/api/shortlist",
+      "url": SITE_URL+"/api/shortlist",
       "method": "POST",
       "headers": {
         "content-type": "application/json",
@@ -133,7 +135,7 @@ $( "#button-shortlist" ).click(function() {
     $.ajax(settings).done(function (response) {
       //console.log("data posted to shortlist api");
       //console.log(response);
-      window.location.href = 'https://shortlist.starclinch.com/thanks';
+      window.location.href = SITE_URL+'/thanks';
     }).fail(function() {
       alert( "There was an error. Please try shortlisting again" );
       $('#portfolio').show();
