@@ -1,7 +1,7 @@
 // console.log(window.location.pathname);
 var modalArtistID;
 
-var SITE_URL = "http://127.0.0.1:8081";
+var SITE_URL = "https://shortlist.starclinch.com";
 
 $.ajax({
   url: SITE_URL+'/api' + window.location.pathname,
