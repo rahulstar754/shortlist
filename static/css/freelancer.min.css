@@ -378,3 +378,9 @@ a:focus, a:hover, a:active {
   background-color: #1a252f;
   border-color: #1a252f;
 }
+
+#site-logo {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+}
