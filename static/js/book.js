@@ -36,6 +36,7 @@ $.ajax({
               '<div data-toggle="modal" data-target="#artist-modal" data-artist="' + artists[i].artistrecordid + '" class="card-body text-secondary"  onclick="ga(\'send\', \'event\', \'card\', \'view-body\', \'' + artists[i].id + '\');">',
                 '<h5 class="card-title">' + artists[i].professionalname  + '</h5>',
                 '<p class="card-text">' + artists[i].city + '<span class="card-rating"><i class="fa fa-star"></i> ' + (artists[i].rating).toString().substring(0,3) + '</span></p>',
+				'<p class="card-text">  PitchCount' + '<span class="card-rating"><i class="badge badge-primary">5+</i> ' + '</span></p>',
                 '<p class="card-text card-category">' + artists[i].category + '</p>',
               '</div>',
               '<div class="card-footer text-center btn btn-secondary" id="butn' + artists[i].artistrecordid + '" onclick="ga(\'send\', \'event\', \'card\', \'select\',\'' + artists[i].id + '\');">',

@@ -272,7 +272,8 @@ app.get("/api/artist/:artistrecordid", function (request, response, next) {
             '<img id="artistImage" class="img-fluid mb-3" src="' + record.fields.profilewp + '" alt="">',
             '<p class="text-aqua text-large mb-2"><i class="fa fa-star"></i> ' + record.fields.rating + '</p>',
             '<p class="mb-2 text-aqua">' + record.fields.city + ' | Does shows ' + record.fields.travel + '</p>',
-            '<p id="artist-subcategory" class="mb-5">Does ' + record.fields.subcategory + ' types of shows</p>',
+            '<a class="card-footer text-center btn bg-color1" id="butn' + record.fields.artistrecordid +'" onclick="ga("send", "event", "card", "select","'+ record.fields.id +'");">SELECT</a>',
+			'<p id="artist-subcategory" class="mb-5">Does ' + record.fields.subcategory + ' types of shows</p>',
             '<p id="artist-tagline" class="mb-5 text-large">' + record.fields.tagline + '</p>'
       ];
       

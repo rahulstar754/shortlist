@@ -384,3 +384,10 @@ a:focus, a:hover, a:active {
   height: auto;
   max-width: 100%;
 }
+.bg-color1{
+  background-color: #18BC9C;
+}
+
+.bg-color1:hover{
+  background-color: rgb(20, 114, 95);
+}
