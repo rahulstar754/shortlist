@@ -28,6 +28,12 @@ $.ajax({
       var html = "";
       for(var i = 0; i < artists.length; i++) {
         // console.log(artists[i].url);
+		
+		if(5 < artists[i].pitchcount ){
+          var sforpitch = '<p class="card-text">  Total Event' + '<span class="card-rating"><i class="badge badge-primary">'+artists[i].pitchcount+'</i> ' + '</span></p>';
+        }else{
+          var sforpitch = '<p class="card-text">  Total Event' + '<span class="card-rating"><i class="badge badge-primary">5</i> ' + '</span></p>';
+        }
         
          var fixture = $([     
           '<div class="col-sm-6 col-lg-4 col-md-6 col-xs-12">',
@@ -36,7 +42,7 @@ $.ajax({
               '<div data-toggle="modal" data-target="#artist-modal" data-artist="' + artists[i].artistrecordid + '" class="card-body text-secondary"  onclick="ga(\'send\', \'event\', \'card\', \'view-body\', \'' + artists[i].id + '\');">',
                 '<h5 class="card-title">' + artists[i].professionalname  + '</h5>',
                 '<p class="card-text">' + artists[i].city + '<span class="card-rating"><i class="fa fa-star"></i> ' + (artists[i].rating).toString().substring(0,3) + '</span></p>',
-				'<p class="card-text">  PitchCount' + '<span class="card-rating"><i class="badge badge-primary">5+</i> ' + '</span></p>',
+			   	sforpitch+
                 '<p class="card-text card-category">' + artists[i].category + '</p>',
               '</div>',
               '<div class="card-footer text-center btn btn-secondary" id="butn' + artists[i].artistrecordid + '" onclick="ga(\'send\', \'event\', \'card\', \'select\',\'' + artists[i].id + '\');">',

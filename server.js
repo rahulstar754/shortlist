@@ -42,7 +42,7 @@ let artists = [];
 let fields = ["artistrecordid", "id", "professionalname", "city", "category", "subcategory", "gender", 
               "url", "profilewp", "updated", "subscription", "tagline", "social", "about",
              "images", "videos", "audios", "coverimage", "performingmembers", "offstageteammembers",
-             "travel", "performanceduration", "rating"];
+             "travel", "performanceduration", "rating", "pitchcount"];
 let options = {
 						view: "TestView",
 		    			fields,

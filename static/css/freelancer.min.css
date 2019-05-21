@@ -391,3 +391,33 @@ a:focus, a:hover, a:active {
 .bg-color1:hover{
   background-color: rgb(20, 114, 95);
 }
+
+.termsandconditions{
+  padding: 60px 80px;
+  background: #307AB5;
+}
+
+.read {
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+  display: inline-block;
+  border: none;
+  outline: none;
+  background: #ec1c24;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.34);
+  -o-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.34);
+  -webkit-transition: transform .2s linear, -webkit-box-shadow .2s linear;
+  -moz-transition: transform .2s linear, -moz-box-shadow .2s linear;
+  transition: transform .2s linear, box-shadow .2s linear;
+  padding: 0.6em 2em;
+}
+
+.read:hover {
+  color:yellow;
+}
