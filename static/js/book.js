@@ -29,10 +29,11 @@ $.ajax({
       for(var i = 0; i < artists.length; i++) {
         // console.log(artists[i].url);
 		
-		if(5 < artists[i].pitchcount ){
-          var sforpitch = '<p class="card-text">  Total Events' + '<span class="card-rating"><i class="badge badge-primary">'+artists[i].pitchcount+'</i> ' + '</span></p>';
+		// console.log(artists[i].url);
+        if(5 < artists[i].pitchcount ){
+          var sforpitch = '<p class="card-text">  Event Bookings' + '<span class="card-rating"><i class="badge badge-primary">'+artists[i].pitchcount+'</i> ' + '</span></p>';
         }else{
-          var sforpitch = '<p class="card-text">  Total Events' + '<span class="card-rating"><i class="badge badge-primary">5</i> ' + '</span></p>';
+          var sforpitch = '<p class="card-text">  Event Bookings' + '<span class="card-rating"><i class="badge badge-primary">'+ Math.floor(Math.random() * 5) + 1 +'</i> ' + '</span></p>';
         }
         
          var fixture = $([     
