@@ -160,7 +160,7 @@ $('body').on('click', '.card-footer', function(event) {
   var getIdb = targetId.substring(4);
   event.stopPropagation();
  
-  $('.card').toggleClass('selected');
+    $(this).closest('.card').toggleClass('selected');
 
     if($('.card').hasClass('selected')) {
       $(this).text('UNSELECT');
