@@ -173,11 +173,13 @@ header.masthead {
 header.masthead h1 {
   font-size: 3rem;
   line-height: 3rem;
+  color:black;
 }
 
 header.masthead h2 {
-  font-size: 1.3rem;
-  font-family: 'Lato';
+  font-size: 1.4rem;
+  font-family: 'intial';
+  color:black;
 }
 
 @media (min-width: 992px) {
@@ -190,7 +192,7 @@ header.masthead h2 {
     line-height: 4rem;
   }
   header.masthead h2 {
-    font-size: 1.75em;
+    font-size: 1.4em;
   }
 }
 
@@ -384,6 +386,31 @@ a:focus, a:hover, a:active {
   height: auto;
   max-width: 100%;
 }
+
+	/* media query */		
+@media screen and (max-width: 770px) {		
+  #site-logo {		
+    width: 140px;		
+    height: auto;		
+    max-width: 100%;		
+  }		
+  #clientName{		
+    font-size: 11px;		
+  }		
+  .h1, h1 {
+    font-size: 1.5rem;
+   } 
+   .footer-copyright img {
+    width: 95%;
+   }
+   
+   .notifyjs-bootstrap-base{
+	   font-size:13px;
+   }
+}		
+
+
+
 .bg-color1{
   background-color: #18BC9C;
 }

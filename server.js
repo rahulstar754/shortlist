@@ -266,7 +266,6 @@ app.get("/api/artist/:artistrecordid", function (request, response, next) {
       var fixtureModalHeader = [
         '<div class="row">',
           '<div class="col-lg-12 mx-auto">',
-            '<img class="d-block w-100 mb-5" src="' + record.fields.coverimage + '">',
             '<h2 id="artistName" class="text-secondary text-uppercase mb-0">' + record.fields.professionalname + '</h2>',
             '<hr class="star-dark mb-5">',
             '<img id="artistImage" class="img-fluid mb-3" src="' + record.fields.profilewp + '" alt="">',
