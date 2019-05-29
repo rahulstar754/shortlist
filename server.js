@@ -51,7 +51,7 @@ let conditions = [];
 let filterByFormula = "";
 
 const categories = {1:"Anchor/Emcee",
-                    2:"Celebrity",
+                    2:"Celebritie",
                     3: "Comedian", 
                     4:"Dancer/Troupe",
                     5:"DJ",
